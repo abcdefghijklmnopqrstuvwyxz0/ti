@@ -1,108 +1,99 @@
 <!DOCTYPE html>
 <style>
-
 /* Accordion styles */
 .accordion {
-background-color: #FF8264AB; /* Accordion color */
-color: #eeebeb; /* Accordion text color */
-cursor: pointer;
-padding: 5px;
-width: 30%;
-border: none;
-text-align: middle;
-outline: none;
-transition: 0.4s;
-border-radius: 15px;
-margin-bottom: 5px;
-font-size: 0.9rem;
+  background-color: #FF8264AB; /* Accordion color */
+  color: #eeebeb; /* Accordion text color */
+  cursor: pointer;
+  padding: 5px;
+  width: 30%;
+  border: none;
+  text-align: middle;
+  outline: none;
+  transition: 0.4s;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
 }
 
 .accordion:before {
-content: "\002B";
-color: #eeebeb; /* Accordion extent + */
-font-weight: bold;
-float: right;
-margin-left: 5px;
-border-radius: 50%;
-padding: 5px;
-transition: transform 0.3s ease-in-out;
+  content: "\002B";
+  color: #eeebeb; /* Accordion extent + */
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  border-radius: 50%;
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .accordion.active:before {
-transform: rotate(45deg);
-background-color: #4d514d; /* Accordion hoover and active x*/
-color: #D9D4B8D4; /* Accordion close button x */
+  transform: rotate(45deg);
+  background-color: #4d514d; /* Accordion hoover and active x*/
+  color: #D9D4B8D4; /* Accordion close button x */
 }
 
 .active,
 .accordion:hover {
-background-color: #D9D4B8D4; /* Accordion ative tab color*/
-border-radius: 10px;
+  background-color: #D9D4B8D4; /* Accordion ative tab color*/
+  border-radius: 10px;
 }
 
 .panel {
-padding: 0 18px;
-background-color: #eeebeb; /* Accordion pannel background collor */
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.2s ease-out;
-border-radius: 10px;
+  padding: 0 18px;
+  background-color: #eeebeb; /* Accordion pannel background collor */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-radius: 10px;
 }
 
 .panel p {
-margin: 0;
-padding: 5px 5px;
+  margin: 0;
+  padding: 5px 5px;
 }
 </style>
-<button class="accordion">EN</button>
+
+<!-- Replace accordion buttons with new button -->
+<ul id="icons03" class="style2 icons">
+  <li>
+    <a class="n01 accordion" href="#one" role="button">
+      <svg aria-labelledby="icons03-icon-1-title">
+        <title id="icons03-icon-1-title">Globe</title>
+        <use xlink:href="#icon-7a66fac84dc5d9fb5fafce395a384d40"></use>
+      </svg>
+      <span class="label">Globe</span>
+    </a>
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 40 40">
+      <polygon points="3.6,10.5 3.6,29.5 20,39 36.4,29.5 36.4,10.5 20,1" vector-effect="non-scaling-stroke"></polygon>
+    </svg>
+  </li>
+</ul>
+
 <div class="panel">
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-sed, dolor.
-</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+    Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
+    sed, dolor.
+  </p>
 </div>
 
-<button class="accordion">ES</button>
-<div class="panel">
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-sed, dolor.
-</p>
-</div>
+<!-- Repeat for other buttons as needed -->
 
-<button class="accordion">FR</button>
-<div class="panel">
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-sed, dolor.
-</p>
-</div>
-
-<button class="accordion">KR</button>
-<div class="panel">
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-sed, dolor.
-</p>
-</div>
 <script>
 // Accordion script
 var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-acc[i].addEventListener("click", function () {
-this.classList.toggle("active");
-var panel = this.nextElementSibling;
-if (panel.style.maxHeight) {
-panel.style.maxHeight = null;
-} else {
-panel.style.maxHeight = panel.scrollHeight + "px";
-}
-});
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
 }
 </script>
