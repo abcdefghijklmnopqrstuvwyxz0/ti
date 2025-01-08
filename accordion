@@ -52,6 +52,27 @@
   margin: 0;
   padding: 5px 5px;
 }
+
+/* Menu button styles */
+.menu-button {
+  display: none;
+  background-color: #FF8264AB;
+  color: #eeebeb;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.menu-button:hover {
+  background-color: #D9D4B8D4;
+}
 </style>
 
 <!-- Replace accordion buttons with new button -->
@@ -71,14 +92,11 @@
 </ul>
 
 <div class="panel">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-    Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-    sed, dolor.
-  </p>
+  <button class="menu-button">Option 1</button>
+  <button class="menu-button">Option 2</button>
+  <button class="menu-button">Option 3</button>
+  <button class="menu-button">Option 4</button>
 </div>
-
-<!-- Repeat for other buttons as needed -->
 
 <script>
 // Accordion script
@@ -93,6 +111,12 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = null;
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+    
+    // Toggle menu buttons visibility
+    var buttons = panel.getElementsByClassName("menu-button");
+    for (var j = 0; j < buttons.length; j++) {
+      buttons[j].style.display = buttons[j].style.display === "block" ? "none" : "block";
     }
   });
 }
