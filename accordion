@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<style>
+
+/* Accordion styles */
+.accordion {
+background-color: #FF8264AB; /* Accordion color */
+color: #eeebeb; /* Accordion text color */
+cursor: pointer;
+padding: 5px;
+width: 30%;
+border: none;
+text-align: middle;
+outline: none;
+transition: 0.4s;
+border-radius: 15px;
+margin-bottom: 5px;
+font-size: 0.9rem;
+}
+
+.accordion:before {
+content: "\002B";
+color: #eeebeb; /* Accordion extent + */
+font-weight: bold;
+float: right;
+margin-left: 5px;
+border-radius: 50%;
+padding: 5px;
+transition: transform 0.3s ease-in-out;
+}
+
+.accordion.active:before {
+transform: rotate(45deg);
+background-color: #4d514d; /* Accordion hoover and active x*/
+color: #D9D4B8D4; /* Accordion close button x */
+}
+
+.active,
+.accordion:hover {
+background-color: #D9D4B8D4; /* Accordion ative tab color*/
+border-radius: 10px;
+}
+
+.panel {
+padding: 0 18px;
+background-color: #eeebeb; /* Accordion pannel background collor */
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+border-radius: 10px;
+}
+
+.panel p {
+margin: 0;
+padding: 5px 5px;
+}
+</style>
+<button class="accordion">EN</button>
+<div class="panel">
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
+sed, dolor.
+</p>
+</div>
+
+<button class="accordion">ES</button>
+<div class="panel">
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
+sed, dolor.
+</p>
+</div>
+
+<button class="accordion">FR</button>
+<div class="panel">
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
+sed, dolor.
+</p>
+</div>
+
+<button class="accordion">KR</button>
+<div class="panel">
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
+sed, dolor.
+</p>
+</div>
+<script>
+// Accordion script
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+acc[i].addEventListener("click", function () {
+this.classList.toggle("active");
+var panel = this.nextElementSibling;
+if (panel.style.maxHeight) {
+panel.style.maxHeight = null;
+} else {
+panel.style.maxHeight = panel.scrollHeight + "px";
+}
+});
+}
+</script>
