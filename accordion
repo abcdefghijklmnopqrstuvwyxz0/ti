@@ -92,10 +92,10 @@
 </ul>
 
 <div class="panel">
-  <button class="menu-button">Option 1</button>
-  <button class="menu-button">Option 2</button>
-  <button class="menu-button">Option 3</button>
-  <button class="menu-button">Option 4</button>
+  <button class="menu-button" onclick="location.href='#section1'">Section 1</button>
+  <button class="menu-button" onclick="location.href='#section2'">Section 2</button>
+  <button class="menu-button" onclick="location.href='#section3'">Section 3</button>
+  <button class="menu-button" onclick="location.href='#section4'">Section 4</button>
 </div>
 
 <script>
