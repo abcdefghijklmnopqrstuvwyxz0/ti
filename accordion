@@ -74,23 +74,6 @@
   background-color: #D9D4B8D4;
 }
 </style>
-
-<!-- Replace accordion buttons with new button -->
-<ul id="icons03" class="style2 icons">
-  <li>
-    <a class="accordion" role="button">
-      <svg aria-labelledby="icons03-icon-1-title">
-        <title id="icons03-icon-1-title">Globe</title>
-        <use xlink:href="#icon-7a66fac84dc5d9fb5fafce395a384d40"></use>
-      </svg>
-      <span class="label">Globe</span>
-    </a>
-    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 40 40">
-      <polygon points="3.6,10.5 3.6,29.5 20,39 36.4,29.5 36.4,10.5 20,1" vector-effect="non-scaling-stroke"></polygon>
-    </svg>
-  </li>
-</ul>
-
 <div class="panel">
   <button class="menu-button" onclick="location.href='#section1'">Section 1</button>
   <button class="menu-button" onclick="location.href='#section2'">Section 2</button>
